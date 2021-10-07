@@ -1,7 +1,39 @@
 %make-paper {
-  background-color: #fff;
-  border-radius: 6px;
-  filter: drop-shadow(1px 2px 8px hsl(0deg 0% 0% / 0.5));
+  background-color: var(--paper-color-bg-default);
   overflow: hidden;
   box-sizing: border-box;
+
+  &.rounded {
+    border-radius: var(--paper-border-radius-4);
+
+    &.radius-1 {
+      border-radius: var(--paper-border-radius-1);
+    }
+
+    &.radius-2 {
+      border-radius: var(--paper-border-radius-2);
+    }
+
+    &.radius-3 {
+      border-radius: var(--paper-border-radius-3);
+    }
+
+    &.radius-4 {
+      border-radius: var(--paper-border-radius-4);
+    }
+  }
+
+  &.elevation {
+    &--dp1 {
+      box-shadow: 0 2px 1px -1px hsl(var(--paper-elevation-color) / 20%),
+        0 1px 1px 0 hsl(var(--paper-elevation-color) / 14%),
+        0 1px 3px 0 hsl(var(--paper-elevation-color) / 12%);
+    }
+
+    &--dp2 {
+      box-shadow: 0 2px 1px -1px hsl(var(--paper-elevation-color) / 20%),
+        0 1px 1px 0 hsl(var(--paper-elevation-color) / 14%),
+        0 1px 3px 0 hsl(var(--paper-elevation-color) / 12%);
+    }
+  }
 }

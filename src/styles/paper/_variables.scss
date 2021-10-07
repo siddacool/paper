@@ -1,0 +1,29 @@
+:root {
+  // border radius
+  --paper-border-radius-0: 0;
+  --paper-border-radius-1: 1px;
+  --paper-border-radius-2: 2px;
+  --paper-border-radius-3: 3px;
+  --paper-border-radius-4: 4px;
+  --paper-border-radius-5: 5px;
+  --paper-border-radius-6: 6px;
+  --paper-border-radius-7: 7px;
+  --paper-border-radius-8: 8px;
+  --paper-border-radius-9: 9px;
+  --paper-border-radius-10: 10px;
+
+  // colors fragmented
+  --paper-elevation-color-h: 0deg;
+  --paper-elevation-color-s: 0%;
+  --paper-elevation-color-l: 0%;
+  --paper-elevation-color: var(--paper-elevation-color-h) var(--paper-elevation-color-s)
+    var(--paper-elevation-color-l);
+
+  // colors
+  --paper-color-bg-default: #fff;
+
+  // extra variables (paper-site)
+  --sidebar-width: 200px;
+  --header-height: 60px;
+  --footer-height: 60px;
+}

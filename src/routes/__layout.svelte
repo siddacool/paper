@@ -2,4 +2,6 @@
   import '~/styles/app.scss';
 </script>
 
-<slot>Loading...</slot>
+<main>
+  <slot>Loading...</slot>
+</main>

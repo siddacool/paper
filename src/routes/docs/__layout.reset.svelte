@@ -1,17 +1,15 @@
 <script>
-  import Base from './base.svelte';
+  import '~/styles/app.scss';
   import Header from '~/components/DocsHeader/DocsHeader.svelte';
   import Main from '~/components/DocsMain/DocsMain.svelte';
   import Sidebar from '~/components/DocsSidebar/DocsSidebar.svelte';
 </script>
 
-<Base>
-  <div class="wrapper">
-    <Header />
-    <Sidebar />
-    <Main><slot>Loading...</slot></Main>
-  </div>
-</Base>
+<div class="wrapper">
+  <Header />
+  <Sidebar />
+  <Main><slot>Loading...</slot></Main>
+</div>
 
 <style lang="scss">
   .wrapper {

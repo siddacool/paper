@@ -26,6 +26,9 @@ const config = {
       base: process.env.NODE_ENV === 'production' ? '/paper' : '',
     },
     vite: () => ({
+      optimizeDeps: {
+        include: ['svelte-hero-icons'],
+      },
       resolve: {
         alias: {
           '~': resolve(__dirname, '/src'),

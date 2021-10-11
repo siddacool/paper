@@ -4,6 +4,6 @@
 
 <Base>
   <main>
-    <slot />
+    <slot>Loading...</slot>
   </main>
 </Base>

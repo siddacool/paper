@@ -2,4 +2,4 @@
   import '~/styles/app.scss';
 </script>
 
-<slot />
+<slot>Loading...</slot>

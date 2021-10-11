@@ -6,4 +6,6 @@
   <title>Paper</title>
 </svelte:head>
 
-<section>Docs</section>
+<section>
+  <h2>Docs</h2>
+</section>

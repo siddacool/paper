@@ -7,11 +7,13 @@
   <title>Paper</title>
 </svelte:head>
 
-<section>yo <Paper /></section>
+<section>yo <Paper /> <a href="/docs/">Docs</a></section>
 
 <style lang="scss">
-  :global(.paper-made) {
-    height: 300px;
-    width: 300px;
+  section {
+    :global(.paper-made) {
+      height: 300px;
+      width: 300px;
+    }
   }
 </style>

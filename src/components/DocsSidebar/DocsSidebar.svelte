@@ -4,9 +4,11 @@
   import Paper from '~/components/Paper.svelte';
   import DecoratedLink from '~/components/DecoratedLink.svelte';
   import IconSelector from '~/components/IconSelector.svelte';
+  let clazz;
+  export { clazz as class };
 </script>
 
-<aside>
+<aside class={`aside ${clazz || ''}`}>
   <Paper class="sidebar-paper">
     <ul>
       {#each sidebarNav as { name, path, icon }}
@@ -46,11 +48,6 @@
 <style lang="scss">
   aside {
     grid-area: sidebar;
-    display: none;
-
-    @media (min-width: 900px) {
-      display: block;
-    }
 
     :global(.sidebar-paper) {
       display: flex;

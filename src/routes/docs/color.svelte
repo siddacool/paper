@@ -6,4 +6,6 @@
   <title>Paper - color</title>
 </svelte:head>
 
-<section>Color</section>
+<section>
+  <h2>Color</h2>
+</section>

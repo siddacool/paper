@@ -6,4 +6,6 @@
   <title>Paper - border</title>
 </svelte:head>
 
-<section>Border</section>
+<section>
+  <h2>Border</h2>
+</section>

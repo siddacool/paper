@@ -6,4 +6,6 @@
   <title>Paper - radius</title>
 </svelte:head>
 
-<section>Radius</section>
+<section>
+  <h2>Radius</h2>
+</section>

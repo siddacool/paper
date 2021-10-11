@@ -12,6 +12,7 @@
     MenuAlt4,
     PaperClip,
     ChevronRight,
+    Menu,
   } from 'svelte-hero-icons';
   import Icon from 'svelte-hero-icons/Icon.svelte';
 </script>
@@ -38,4 +39,8 @@
 
 {#if icon === 'chevron-right'}
   <Icon src={ChevronRight} {size} solid={solidIcon} class={`icon ${clazz || ''}`} />
+{/if}
+
+{#if icon === 'menu'}
+  <Icon src={Menu} {size} solid={solidIcon} class={`icon ${clazz || ''}`} />
 {/if}

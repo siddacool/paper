@@ -6,4 +6,6 @@
   <title>Paper - elevation</title>
 </svelte:head>
 
-<section>Elevation</section>
+<section>
+  <h2>Elevation</h2>
+</section>

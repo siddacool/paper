@@ -19,12 +19,8 @@ const config = {
   ],
   kit: {
     // hydrate the <div id="svelte"> element in src/app.html
-    appDir: 'app_',
     target: '#svelte',
     adapter: adapter({ pages: 'build', assets: 'build', fallback: null }),
-    paths: {
-      base: process.env.NODE_ENV === 'production' ? '/paper' : '',
-    },
     vite: () => ({
       optimizeDeps: {
         include: ['svelte-hero-icons'],

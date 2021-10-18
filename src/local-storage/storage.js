@@ -1,12 +1,18 @@
+import { browser } from '$app/env';
 const storageName = 'paper-svelte-app';
 
 const getComplete = () => {
   // Create storage if none exists
-  if (!localStorage.getItem(storageName)) {
-    localStorage.setItem(storageName, JSON.stringify({}));
-  }
 
-  return JSON.parse(localStorage.getItem(storageName));
+  if (browser) {
+    if (!localStorage.getItem(storageName)) {
+      localStorage.setItem(storageName, JSON.stringify({}));
+    }
+
+    return JSON.parse(localStorage.getItem(storageName));
+  } else {
+    return {};
+  }
 };
 
 const getItem = (name) => {
@@ -23,7 +29,9 @@ const setItems = (list = {}) => {
 
   const newStore = JSON.stringify(Object.assign({}, store, list));
 
-  localStorage.setItem(storageName, newStore);
+  if (browser) {
+    localStorage.setItem(storageName, newStore);
+  }
 };
 
 const deleteItem = (name) => {
@@ -33,15 +41,21 @@ const deleteItem = (name) => {
 
   delete store[name];
 
-  localStorage.setItem(storageName, JSON.stringify(store));
+  if (browser) {
+    localStorage.setItem(storageName, JSON.stringify(store));
+  }
 };
 
 const clear = () => {
-  localStorage.setItem(storageName, JSON.stringify({}));
+  if (browser) {
+    localStorage.setItem(storageName, JSON.stringify({}));
+  }
 };
 
 const deleteComplete = () => {
-  localStorage.removeItem(storageName);
+  if (browser) {
+    localStorage.removeItem(storageName);
+  }
 };
 
 export default {

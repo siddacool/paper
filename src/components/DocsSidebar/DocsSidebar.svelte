@@ -10,7 +10,7 @@
 
 <aside class={`aside ${clazz || ''}`}>
   <Paper class="sidebar-paper">
-    <ul>
+    <ul class="sidebar-ul">
       {#each sidebarNav as { name, path, icon }}
         <li>
           {#if path === ''}

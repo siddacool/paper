@@ -1,9 +1,11 @@
 <script>
   import Paper from '~/components/Paper.svelte';
+  import MenuButton from '~/components/MenuButton.svelte';
 </script>
 
 <header>
   <Paper class="header-paper">
+    <MenuButton />
     <h3>
       <a href="/docs/">Paper.docs</a>
     </h3>

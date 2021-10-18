@@ -1,8 +1,17 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+
   import Paper from '~/components/Paper.svelte';
+  const dispatch = createEventDispatcher();
 
   let clazz;
   export { clazz as class };
+
+  function sayHello() {
+    dispatch('click', {
+      text: 'Hello!',
+    });
+  }
 </script>
 
 <button class={`button ${clazz || ''}`} on:click>

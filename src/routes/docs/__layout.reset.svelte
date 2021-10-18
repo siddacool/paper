@@ -1,17 +1,26 @@
 <script>
   import '~/styles/app.scss';
-  import Modal from 'svelte-simple-modal';
   import Header from '~/components/DocsHeader/DocsHeader.svelte';
   import Main from '~/components/DocsMain/DocsMain.svelte';
   import Sidebar from '~/components/DocsSidebar/DocsSidebar.svelte';
+  import Modal from '~/components/Modal.svelte';
+  import openSidebar from '~/store/openSidebar';
+
+  const onModalClose = () => {
+    openSidebar.hide();
+  };
 </script>
 
 <div class="wrapper">
   <Header />
   <Sidebar class="sidebar" />
   <Main><slot>Loading...</slot></Main>
-  <Modal>
-    <Sidebar class="modal-sidebar" />
+  <Modal open={$openSidebar} class="modal-for-sidebar" on:close={onModalClose}>
+    <div class="modal-holder">
+      <div class="modal-content">
+        <Sidebar class="content" />
+      </div>
+    </div>
   </Modal>
 </div>
 
@@ -37,12 +46,38 @@
       }
     }
 
-    :global(.modal-sidebar) {
-      display: block;
-
+    :global(.modal-for-sidebar) {
       @media (min-width: 900px) {
         display: none;
       }
+    }
+    .modal-holder {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+
+    .modal-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 200px;
+    }
+
+    :global(.content) {
+      height: 100%;
+      width: 100%;
+    }
+
+    :global(.content .sidebar-ul) {
+      align-self: flex-end;
+      padding-bottom: 60px;
+    }
+
+    :global(.content .sidebar-ul a) {
+      height: 50px;
+      align-items: center;
     }
   }
 </style>

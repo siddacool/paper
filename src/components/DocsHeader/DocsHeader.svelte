@@ -1,6 +1,7 @@
 <script>
   import Paper from '~/components/Paper.svelte';
   import MenuButton from '~/components/MenuButton.svelte';
+  import ThemeToggleSection from '../ThemeToggleSection.svelte';
 </script>
 
 <header>
@@ -9,6 +10,7 @@
     <h3>
       <a href="/docs/">Paper.docs</a>
     </h3>
+    <ThemeToggleSection />
   </Paper>
 </header>
 

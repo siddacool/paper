@@ -5,13 +5,14 @@
   import Sidebar from '~/components/DocsSidebar/DocsSidebar.svelte';
   import Modal from '~/components/Modal.svelte';
   import openSidebar from '~/store/openSidebar';
+  import theme from '~/store/theme';
 
   const onModalClose = () => {
     openSidebar.hide();
   };
 </script>
 
-<div class="wrapper">
+<div class={$theme === 'dark' ? 'wrapper dark' : 'wrapper'}>
   <Header />
   <Sidebar class="sidebar" />
   <Main><slot>Loading...</slot></Main>
@@ -28,6 +29,7 @@
   .wrapper {
     display: flex;
     flex-direction: column;
+    color: var(--paper-site-font-color);
     @media (min-width: 900px) {
       height: 100vh;
       display: grid;

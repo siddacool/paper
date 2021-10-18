@@ -13,6 +13,8 @@
     PaperClip,
     ChevronRight,
     Menu,
+    Moon,
+    Sun,
   } from 'svelte-hero-icons';
   import Icon from 'svelte-hero-icons/Icon.svelte';
 </script>
@@ -43,4 +45,12 @@
 
 {#if icon === 'menu'}
   <Icon src={Menu} {size} solid={solidIcon} class={`icon ${clazz || ''}`} />
+{/if}
+
+{#if icon === 'moon'}
+  <Icon src={Moon} {size} solid={solidIcon} class={`icon ${clazz || ''}`} />
+{/if}
+
+{#if icon === 'sun'}
+  <Icon src={Sun} {size} solid={solidIcon} class={`icon ${clazz || ''}`} />
 {/if}

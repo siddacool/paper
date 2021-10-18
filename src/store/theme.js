@@ -1,18 +1,40 @@
 import { writable } from 'svelte/store';
+import themeLocalStorage from '~/local-storage/theme';
+
+const defaultTheme = themeLocalStorage.get() ? themeLocalStorage.get() : 'light';
+
+const updateTheme = (val = 'light') => {
+  themeLocalStorage.set(val);
+};
 
 function theme() {
-  const { subscribe, update } = writable('light');
+  const { subscribe, update } = writable(defaultTheme);
 
   return {
     subscribe,
     toggle: () => {
-      update((pos) => (pos === 'light' ? 'dark' : 'light'));
+      update((pos) => {
+        const themeToSet = pos === 'light' ? 'dark' : 'light';
+        updateTheme(themeToSet);
+
+        return themeToSet;
+      });
     },
     light: () => {
-      update(() => 'light');
+      update(() => {
+        const themeToSet = 'light';
+        updateTheme(themeToSet);
+
+        return themeToSet;
+      });
     },
     dark: () => {
-      update(() => 'dark');
+      update(() => {
+        const themeToSet = 'dark';
+        updateTheme(themeToSet);
+
+        return themeToSet;
+      });
     },
   };
 }

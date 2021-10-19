@@ -3,15 +3,12 @@
   import Button from '~/components/Button.svelte';
   import IconSelector from '~/components/IconSelector.svelte';
 
-  let clazz;
-  export { clazz as class };
-
   const onSetSidebar = () => {
     openSidebar.toggle();
   };
 </script>
 
-<Button on:click={onSetSidebar} class={`menu-btn ${clazz || ''}`}>
+<Button on:click={onSetSidebar} class="menu-btn">
   <IconSelector icon="menu" />
 </Button>
 

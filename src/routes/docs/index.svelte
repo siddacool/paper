@@ -3,9 +3,28 @@
 </script>
 
 <script>
+  import Checkbox from '~/components/Checkbox.svelte';
   import DisplayBox from '~/components/DisplayBox.svelte';
   import Paper from '~/components/Paper.svelte';
-  const classesList = [];
+  const classesListOg = [];
+
+  let classesList = [];
+
+  const onHollowChange = (e) => {
+    if (classesList.includes('hollow')) {
+      classesList = classesList.filter((c) => c !== 'hollow');
+    } else {
+      classesList = [...classesList, 'hollow'];
+    }
+  };
+
+  const onBorderChange = (e) => {
+    if (classesList.includes('border')) {
+      classesList = classesList.filter((c) => c !== 'border');
+    } else {
+      classesList = [...classesList, 'border'];
+    }
+  };
 </script>
 
 <svelte:head>
@@ -21,13 +40,32 @@
 
   <p>Following is the example with required class name to make it work 👉</p>
 
-  <DisplayBox {classesList}>
+  <DisplayBox {classesListOg}>
     <Paper class="example" />
   </DisplayBox>
 
-  <p>Paper with diffrent options</p>
+  <br />
+
+  <p>Paper can be customized using classes. here is Paper with all the available configurations</p>
 
   <DisplayBox {classesList}>
-    <Paper class="example" />
+    <Paper
+      class="example"
+      border={classesList.includes('border')}
+      hollow={classesList.includes('hollow')}
+    />
+
+    <div slot="options">
+      <Checkbox
+        label="border"
+        on:change={onBorderChange}
+        checked={classesList.includes('border')}
+      />
+      <Checkbox
+        label="hollow"
+        on:change={onHollowChange}
+        checked={classesList.includes('hollow')}
+      />
+    </div>
   </DisplayBox>
 </section>

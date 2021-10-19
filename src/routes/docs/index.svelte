@@ -1,8 +1,11 @@
 <script context="module">
+  export const prerender = true;
+</script>
+
+<script>
   import DisplayBox from '~/components/DisplayBox.svelte';
   import Paper from '~/components/Paper.svelte';
-
-  export const prerender = true;
+  const classesList = [];
 </script>
 
 <svelte:head>
@@ -16,7 +19,9 @@
     needs.
   </p>
 
-  <DisplayBox>
+  <p>Following is the example with required class name to make it work 👉</p>
+
+  <DisplayBox {classesList}>
     <Paper class="example" />
   </DisplayBox>
 </section>

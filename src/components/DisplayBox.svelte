@@ -5,7 +5,7 @@
 
 <article class="display-box">
   <Paper class="display-box-paper">
-    <div><slot /></div>
+    <div class="preview"><slot /></div>
     <div>
       <div class="options"><slot name="options" /></div>
       <pre>
@@ -30,6 +30,17 @@
 
     b {
       color: var(--paper-site-primary-color);
+    }
+
+    code {
+      white-space: break-spaces;
+      font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    }
+
+    .preview {
+      @media (min-width: 900px) {
+        max-width: 340px;
+      }
     }
   }
 

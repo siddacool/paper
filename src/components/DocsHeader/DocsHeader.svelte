@@ -45,7 +45,7 @@
     }
 
     a {
-      color: inherit;
+      color: var(--paper-site-primary-color);
       text-decoration: none;
     }
 

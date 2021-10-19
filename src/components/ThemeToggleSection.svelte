@@ -22,4 +22,8 @@
   .theme-toggle-section {
     margin-left: auto;
   }
+
+  :global(.theme-toggle-btn) {
+    color: var(--paper-site-primary-color);
+  }
 </style>

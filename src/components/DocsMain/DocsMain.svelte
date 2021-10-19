@@ -18,12 +18,14 @@
       width: 100%;
       overflow-y: auto;
       padding-bottom: 100px;
+      min-height: 100vh;
 
       @media (min-width: 900px) {
         height: 100%;
         padding-left: var(--paper-site-space-3);
         padding-right: var(--paper-site-space-3);
         height: calc(100vh - var(--header-height));
+        min-height: initial;
       }
     }
   }

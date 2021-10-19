@@ -12,7 +12,7 @@
   };
 </script>
 
-<div class={$theme === 'dark' ? 'wrapper dark' : 'wrapper'}>
+<div class={$theme === 'dark' ? 'wrapper-docs dark' : 'wrapper-docs'}>
   <Header />
   <Sidebar class="sidebar" />
   <Main><slot>Loading...</slot></Main>
@@ -26,7 +26,7 @@
 </div>
 
 <style lang="scss">
-  .wrapper {
+  .wrapper-docs {
     display: flex;
     flex-direction: column;
     color: var(--paper-site-font-color);

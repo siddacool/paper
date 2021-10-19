@@ -1,0 +1,28 @@
+:root {
+  --sidebar-width: 180px;
+  --header-height: 60px;
+  --footer-height: 60px;
+
+  --paper-site-space-1: 8px;
+  --paper-site-space-2: 16px;
+  --paper-site-space-3: 24px;
+  --paper-site-space-4: 32px;
+  --paper-site-space-5: 40px;
+  --paper-site-space-6: 48px;
+  --paper-site-space-7: 56px;
+  --paper-site-space-8: 64px;
+  --paper-site-space-9: 72px;
+  --paper-site-space-10: 80px;
+
+  --paper-site-border-color: #ededed;
+  --paper-site-selection-color: aliceblue;
+  --paper-site-primary-color: #612dff;
+  --paper-site-font-color: #4b3e91;
+}
+
+.dark {
+  --paper-site-border-color: #47426c;
+  --paper-site-selection-color: #2b3e78;
+  --paper-site-primary-color: #ff80f5;
+  --paper-site-font-color: #cec7f1;
+}

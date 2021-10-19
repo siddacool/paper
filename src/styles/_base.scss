@@ -17,3 +17,14 @@ h5,
 h6 {
   margin: 0;
 }
+
+.wrapper-docs {
+  p {
+    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+    max-width: 60ch;
+  }
+
+  h2 {
+    margin-bottom: 1em;
+  }
+}

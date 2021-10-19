@@ -7,5 +7,9 @@
 </svelte:head>
 
 <section>
-  <h2>Docs</h2>
+  <p>
+    Paper is one shoes fits all component that can be modified and adpated to make layouts, UI
+    compoenents. It's written in scss and uses css variables which can be tinkered as per one's
+    needs.
+  </p>
 </section>

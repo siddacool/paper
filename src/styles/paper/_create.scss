@@ -36,4 +36,14 @@
         0 1px 3px 0 hsl(var(--paper-elevation-color) / 12%);
     }
   }
+
+  &.border {
+    border-width: var(--paper-border-width);
+    border-style: var(--paper-border-style);
+    border-color: var(--paper-color-border);
+  }
+
+  &.hollow {
+    background-color: transparent;
+  }
 }

@@ -6,8 +6,10 @@
 <article class="display-box">
   <Paper class="display-box-paper">
     <div class="preview"><slot /></div>
-    <div>
-      <div class="options"><slot name="options" /></div>
+    <div class="code-box">
+      <div class="options">
+        <slot name="options" />
+      </div>
       <pre>
         <code>
         &lt;div class="<b>paper-made {classesList.join(' ')}</b>"&gt;&lt;/div&gt;
@@ -40,6 +42,14 @@
     .preview {
       @media (min-width: 900px) {
         max-width: 340px;
+      }
+    }
+
+    .code-box {
+      padding-top: var(--paper-site-space-2);
+
+      @media (min-width: 900px) {
+        padding: 0;
       }
     }
   }

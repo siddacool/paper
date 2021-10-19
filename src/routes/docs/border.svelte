@@ -3,9 +3,18 @@
 </script>
 
 <script>
+  import Checkbox from '~/components/Checkbox.svelte';
   import DisplayBox from '~/components/DisplayBox.svelte';
   import Paper from '~/components/Paper.svelte';
-  const classesList = ['border'];
+  let classesList = ['border', 'hollow'];
+
+  const onHollowChange = (e) => {
+    if (classesList.includes('hollow')) {
+      classesList = classesList.filter((c) => c !== 'hollow');
+    } else {
+      classesList = [...classesList, 'hollow'];
+    }
+  };
 </script>
 
 <svelte:head>
@@ -18,6 +27,14 @@
   <p>Add a border around paper like this</p>
 
   <DisplayBox {classesList}>
-    <Paper class="example" />
+    <Paper class="example" border hollow={classesList.includes('hollow')} />
+
+    <div slot="options">
+      <Checkbox
+        label="hollow"
+        on:change={onHollowChange}
+        checked={classesList.includes('hollow')}
+      />
+    </div>
   </DisplayBox>
 </section>

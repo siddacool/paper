@@ -21,8 +21,14 @@
 
   // colors
   --paper-color-bg-default: #fff;
+  --paper-color-border: #ddd9d9;
+
+  // border
+  --paper-border-width: 1px;
+  --paper-border-style: solid;
 }
 
 .dark {
   --paper-color-bg-default: #000;
+  --paper-color-border: #403e3e;
 }

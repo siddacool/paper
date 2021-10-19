@@ -24,4 +24,10 @@
   <DisplayBox {classesList}>
     <Paper class="example" />
   </DisplayBox>
+
+  <p>Paper with diffrent options</p>
+
+  <DisplayBox {classesList}>
+    <Paper class="example" />
+  </DisplayBox>
 </section>

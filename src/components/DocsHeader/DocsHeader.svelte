@@ -18,7 +18,17 @@
   header {
     height: var(--header-height);
     grid-area: header;
-    order: 2;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+
+    @media (min-width: 900px) {
+      position: static;
+      left: initial;
+      bottom: initial;
+      width: initial;
+    }
 
     :global(.header-paper) {
       display: flex;
@@ -26,6 +36,7 @@
       align-items: center;
       padding: 0 var(--paper-site-space-2);
       border-top: 2px solid var(--paper-site-border-color);
+      position: relative;
 
       @media (min-width: 900px) {
         border-top: none;

@@ -1,7 +1,7 @@
 import { browser } from '$app/env';
 const storageName = 'paper-svelte-app';
 
-const getComplete = () => {
+export const getComplete = () => {
   // Create storage if none exists
 
   if (browser) {
@@ -15,7 +15,7 @@ const getComplete = () => {
   }
 };
 
-const getItem = (name) => {
+export const getItem = (name) => {
   const store = getComplete();
 
   if (!store[name]) return '';
@@ -23,7 +23,7 @@ const getItem = (name) => {
   return store[name];
 };
 
-const setItems = (list = {}) => {
+export const setItems = (list = {}) => {
   // List = { filed: 'value' }
   const store = getComplete();
 
@@ -34,7 +34,7 @@ const setItems = (list = {}) => {
   }
 };
 
-const deleteItem = (name) => {
+export const deleteItem = (name) => {
   const store = getComplete();
 
   if (!store[name]) return;
@@ -46,23 +46,36 @@ const deleteItem = (name) => {
   }
 };
 
-const clear = () => {
+export const clear = () => {
   if (browser) {
     localStorage.setItem(storageName, JSON.stringify({}));
   }
 };
 
-const deleteComplete = () => {
+export const deleteComplete = () => {
   if (browser) {
     localStorage.removeItem(storageName);
   }
 };
 
-export default {
-  getComplete,
-  getItem,
-  setItems,
-  deleteItem,
-  clear,
-  deleteComplete,
+export const newStorage = (name = '') => {
+  const set = (val = '') => {
+    setItems({
+      [name]: val,
+    });
+  };
+
+  const get = () => {
+    return getItem(name);
+  };
+
+  const clear = () => {
+    deleteItem(name);
+  };
+
+  return {
+    set,
+    get,
+    clear,
+  };
 };

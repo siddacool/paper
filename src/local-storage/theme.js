@@ -1,23 +1,5 @@
-import storage from './storage';
+import { newStorage } from './storage';
 
-const name = 'THEME';
+const themeLocalStorage = newStorage('THEME');
 
-const set = (val = '') => {
-  storage.setItems({
-    [name]: val,
-  });
-};
-
-const get = () => {
-  return storage.getItem(name);
-};
-
-const clear = () => {
-  storage.deleteItem(name);
-};
-
-export default {
-  set,
-  get,
-  clear,
-};
+export default themeLocalStorage;

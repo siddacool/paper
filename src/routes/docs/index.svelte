@@ -1,4 +1,7 @@
 <script context="module">
+  import DisplayBox from '~/components/DisplayBox.svelte';
+  import Paper from '~/components/Paper.svelte';
+
   export const prerender = true;
 </script>
 
@@ -12,4 +15,8 @@
     compoenents. It's written in scss and uses css variables which can be tinkered as per one's
     needs.
   </p>
+
+  <DisplayBox>
+    <Paper class="example" />
+  </DisplayBox>
 </section>

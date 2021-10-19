@@ -1,0 +1,26 @@
+<script>
+  import Paper from './Paper.svelte';
+</script>
+
+<article class="display-box">
+  <Paper class="display-box-paper"><slot /></Paper>
+</article>
+
+<style lang="scss">
+  .display-box {
+
+    width: 100%;
+    min-height: 300px;
+    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+    display: flex;
+
+    @media (min-width: 900px) {
+      max-width: 60ch;
+    }
+  }
+
+  :global(.display-box-paper) {
+    width: 100%;
+    padding: var(--paper-site-space-2);
+  }
+</style>

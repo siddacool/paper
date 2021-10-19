@@ -17,8 +17,7 @@
 
 <style lang="scss">
   :global(.menu-btn) {
-    z-index: 2000;
-
+    margin-right: var(--paper-site-space-2);
     @media (min-width: 900px) {
       display: none;
     }

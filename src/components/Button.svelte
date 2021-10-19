@@ -19,7 +19,7 @@
 </button>
 
 <style lang="scss">
-  button {
+  :global(.button) {
     background: transparent;
     outline: none;
     border: none;
@@ -27,13 +27,14 @@
     padding: 0;
     margin: 0;
     color: inherit;
-    :global(.button-paper) {
-      padding: 4px 6px;
-      cursor: pointer;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  }
+
+  :global(.button-paper) {
+    padding: 4px 6px;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

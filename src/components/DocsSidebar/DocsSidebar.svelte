@@ -15,9 +15,6 @@
         <li>
           {#if path === ''}
             <DecoratedLink href={`/docs/${path}`} isActive={$page.path === '/docs' ? true : false}>
-              {#if icon}
-                <IconSelector {icon} />
-              {/if}
               {name}
 
               {#if $page.path === '/docs' ? true : false}
@@ -29,9 +26,6 @@
               href={`/docs/${path}`}
               isActive={$page.path.includes(`/docs/${path}`) ? true : false}
             >
-              {#if icon}
-                <IconSelector {icon} />
-              {/if}
               {name}
 
               {#if $page.path.includes(`/docs/${path}`) ? true : false}

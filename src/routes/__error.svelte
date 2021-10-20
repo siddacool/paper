@@ -1,30 +1,32 @@
 <script>
-  import Paper from '~/components/Paper.svelte';
 </script>
 
 <div class="page-not-found">
-  <Paper class="page-not-found-paper">
-    <section>
-      <h2>You are lost</h2>
-      <p><a href="/">👈 Get back to Paper</a></p>
-    </section>
-  </Paper>
+  <section>
+    <h2>You are lost</h2>
+    <p><a href="/">👈 Get back to Paper</a></p>
+  </section>
 </div>
 
 <style lang="scss">
-  :global(.page-not-found-paper) {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    padding: var(--paper-site-space-2);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .page-not-found {
+    height: 100%;
+    width: 100%;
   }
 
   section {
-    position: relative;
-    top: -20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    padding-bottom: 100px;
+
+    @media (min-width: 900px) {
+      padding-bottom: 0;
+      justify-content: flex-start;
+      padding-top: 10vh;
+    }
   }
 
   h2 {

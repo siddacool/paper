@@ -7,7 +7,7 @@
   <title>Paper</title>
 </svelte:head>
 
-<section>yo <Paper class="example" /> <a href="/docs/">Docs</a></section>
+<section><h2>Paper</h2> <Paper class="example" /> <a href="/docs/">Docs</a></section>
 
 <style lang="scss">
   section {

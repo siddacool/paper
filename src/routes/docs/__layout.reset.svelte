@@ -6,12 +6,14 @@
   import Modal from '~/components/Modal.svelte';
   import openSidebar from '~/store/openSidebar';
   import theme from '~/store/theme';
+  import Favicon from '~/components/Favicon.svelte';
 
   const onModalClose = () => {
     openSidebar.hide();
   };
 </script>
 
+<Favicon />
 <div class={$theme === 'dark' ? 'wrapper-docs dark' : 'wrapper-docs'}>
   <Header />
   <Sidebar class="sidebar" />

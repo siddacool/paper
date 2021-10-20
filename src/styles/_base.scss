@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  color: var(--paper-site-font-color);
 }
 
 * {
@@ -13,21 +14,21 @@ h3 {
   margin: 0;
 }
 
+p {
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  line-height: 1.7;
+
+  @media (min-width: 900px) {
+    max-width: 60ch;
+  }
+}
+
+h2 {
+  font-size: clamp(28px, 2.5vw, 2rem);
+  margin-top: 0;
+}
+
 .wrapper-docs {
-  p {
-    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
-    line-height: 1.7;
-
-    @media (min-width: 900px) {
-      max-width: 60ch;
-    }
-  }
-
-  h2 {
-    font-size: clamp(28px, 2.5vw, 2rem);
-    margin-top: 0;
-  }
-
   main {
     .main-paper {
       & > section {

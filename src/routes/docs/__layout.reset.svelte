@@ -5,16 +5,15 @@
   import Sidebar from '~/components/DocsSidebar/DocsSidebar.svelte';
   import Modal from '~/components/Modal.svelte';
   import openSidebar from '~/store/openSidebar';
-  import theme from '~/store/theme';
-  import Favicon from '~/components/Favicon.svelte';
+  import ThemeSetter from '~/components/ThemeSetter.svelte';
 
   const onModalClose = () => {
     openSidebar.hide();
   };
 </script>
 
-<Favicon />
-<div class={$theme === 'dark' ? 'wrapper-docs dark' : 'wrapper-docs'}>
+<ThemeSetter />
+<div class="wrapper-docs">
   <Header />
   <Sidebar class="sidebar" />
   <Main><slot>Loading...</slot></Main>
@@ -31,7 +30,6 @@
   .wrapper-docs {
     display: flex;
     flex-direction: column;
-    color: var(--paper-site-font-color);
     @media (min-width: 900px) {
       height: 100vh;
       display: grid;

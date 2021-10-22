@@ -3,9 +3,12 @@
 </script>
 
 <script>
+  import radiusOptions from '~/data/radius-options';
   import Checkbox from '~/components/Checkbox.svelte';
   import DisplayBox from '~/components/DisplayBox.svelte';
   import Paper from '~/components/Paper.svelte';
+  import Select from '~/components/Select.svelte';
+  import Border from './border.svelte';
   const classesListOg = [];
 
   let classesList = [];
@@ -24,6 +27,12 @@
     } else {
       classesList = [...classesList, 'border'];
     }
+  };
+
+  let radiusVal = 'radius-1';
+
+  const onRadiusChange = (event) => {
+    radiusVal = event.detail;
   };
 </script>
 
@@ -48,11 +57,12 @@
 
   <p>Paper can be customized using classes. here is Paper with all the available configurations</p>
 
-  <DisplayBox {classesList}>
+  <DisplayBox classesList={[...classesList, radiusVal]}>
     <Paper
       class="example"
       border={classesList.includes('border')}
       hollow={classesList.includes('hollow')}
+      radius={`${radiusVal.replace('radius-', '')}`}
     />
 
     <div slot="options">
@@ -66,6 +76,7 @@
         on:change={onHollowChange}
         checked={classesList.includes('hollow')}
       />
+      <Select options={radiusOptions} on:change={onRadiusChange} value={radiusVal} />
     </div>
   </DisplayBox>
 </section>

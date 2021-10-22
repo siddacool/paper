@@ -58,3 +58,13 @@ h2 {
     --paper-color-bg-default: #000;
   }
 }
+
+select {
+  background-color: transparent;
+  color: var(--paper-site-font-color);
+  border-color: var(--paper-site-font-color);
+
+  option {
+    background-color: var(--paper-color-bg-default);
+  }
+}

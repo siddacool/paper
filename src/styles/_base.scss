@@ -56,11 +56,13 @@ main {
   width: 100%;
   max-width: 300px;
   height: 300px;
+  color: #000;
 }
 
 .dark {
   .example {
     --paper-color-bg-default: #212121;
+    color: #fff;
   }
 }
 

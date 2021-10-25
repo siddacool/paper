@@ -8,3 +8,4 @@ https://paperstyle.netlify.app/
 
 - https://material-components.github.io/material-components-web-catalog/#/component/elevation
 - https://mui.com/components/paper/
+- https://materialui.co/colors/

@@ -198,7 +198,7 @@
   &.border {
     border-width: var(--paper-border-width);
     border-style: var(--paper-border-style);
-    border-color: var(--paper-color-border);
+    border-color: var(--paper-color-border-default);
   }
 
   &.hollow {
@@ -207,5 +207,35 @@
 
   &.black {
     background-color: var(--paper-color-bg-black);
+  }
+
+  &.color {
+    &-primary {
+      background-color: var(--paper-color-bg-primary);
+    }
+
+    &-secondary {
+      background-color: var(--paper-color-bg-secondary);
+    }
+
+    &-dull {
+      background-color: var(--paper-color-bg-dull);
+    }
+
+    &-danger {
+      background-color: var(--paper-color-bg-danger);
+    }
+
+    &-safe {
+      background-color: var(--paper-color-bg-safe);
+    }
+
+    &-warning {
+      background-color: var(--paper-color-bg-warning);
+    }
+
+    &-info {
+      background-color: var(--paper-color-bg-info);
+    }
   }
 }

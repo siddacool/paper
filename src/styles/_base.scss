@@ -30,17 +30,23 @@ header {
   }
 }
 
+main {
+  h3 {
+    font-size: clamp(1.4rem, 1.65vw, 1.65rem);
+    line-height: 1.7;
+  }
+
+  a {
+    color: var(--paper-site-link-color);
+  }
+}
+
 .wrapper-docs {
   main {
     .main-paper {
       & > section {
         width: 100%;
       }
-    }
-
-    h3 {
-      font-size: clamp(1.4rem, 1.65vw, 1.65rem);
-      line-height: 1.7;
     }
   }
 }

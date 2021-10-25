@@ -3,7 +3,7 @@
 </script>
 
 <div class="reference-section">
-  <p>References:</p>
+  <div>References:</div>
 
   <ul>
     {#each list as { href, title }}
@@ -18,13 +18,13 @@
 
 <style lang="scss">
   .reference-section {
+    font-size: clamp(1.1rem, 1.2vw, 1.3rem);
     ul {
-      padding-left: 18px;
       margin-top: 0;
     }
 
-    p {
-      margin-bottom: 0;
+    li {
+      margin-bottom: var(--paper-site-space-1);
     }
   }
 </style>

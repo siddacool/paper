@@ -9,20 +9,18 @@
   const dispatch = createEventDispatcher();
 
   const forward = (event) => {
-    const findOpt = options.find((o) => o.name === event.target.value)
-      ? options.find((o) => o.name === event.target.value).value
-      : '';
-
-    dispatch('change', findOpt);
+    dispatch('change', event.target.value);
   };
 </script>
 
 <div class={`select ${clazz || ''}`}>
   <label>
     {label}
-    <select on:change={(e) => forward(e)}>
-      {#each options as { val, name }}
-        <option {val} selected={val === value}>{name}</option>
+    <select bind:value on:change={(e) => forward(e)}>
+      {#each options as option}
+        <option value={option.value}>
+          {option.name}
+        </option>
       {/each}
     </select>
   </label>

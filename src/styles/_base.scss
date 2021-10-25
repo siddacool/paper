@@ -38,10 +38,6 @@ h2 {
   }
 }
 
-.display-box {
-  --paper-color-bg-default: #f3f3f3;
-}
-
 .example {
   --paper-color-bg-default: #fff;
   width: 100%;
@@ -50,10 +46,6 @@ h2 {
 }
 
 .dark {
-  .display-box {
-    --paper-color-bg-default: #2c2d38;
-  }
-
   .example {
     --paper-color-bg-default: #000;
   }

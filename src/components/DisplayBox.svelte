@@ -1,22 +1,19 @@
 <script>
-  import Paper from './Paper.svelte';
   export let classesList = [];
 </script>
 
 <article class="display-box">
-  <Paper class="display-box-paper">
-    <div class="preview"><slot /></div>
-    <div class="code-box">
-      <div class="options">
-        <slot name="options" />
-      </div>
-      <pre>
-        <code>
-        &lt;div class="<b>paper-made {classesList.join(' ')}</b>"&gt;&lt;/div&gt;
-       </code>
-     </pre>
+  <div class="preview"><slot /></div>
+  <div class="code-box">
+    <div class="options">
+      <slot name="options" />
     </div>
-  </Paper>
+    <pre>
+      <code>
+      &lt;div class="<b>paper-made {classesList.join(' ')}</b>"&gt;&lt;/div&gt;
+     </code>
+   </pre>
+  </div>
 </article>
 
 <style lang="scss">
@@ -25,6 +22,8 @@
     min-height: 300px;
     font-size: clamp(1.2rem, 1.6vw, 1.6rem);
     display: flex;
+    padding: var(--paper-site-space-2);
+    background-color: var(--paper-site-display-box-color);
 
     @media (min-width: 900px) {
       max-width: 60ch;
@@ -40,30 +39,19 @@
     }
 
     .preview {
+      flex: 1;
       @media (min-width: 900px) {
         max-width: 340px;
       }
     }
 
     .code-box {
+      flex: 1;
       padding-top: var(--paper-site-space-2);
 
       @media (min-width: 900px) {
         padding: 0;
       }
     }
-  }
-
-  :global(.display-box-paper) {
-    width: 100%;
-    padding: var(--paper-site-space-2);
-
-    @media (min-width: 900px) {
-      display: flex;
-    }
-  }
-
-  :global(.display-box-paper > div) {
-    flex: 1;
   }
 </style>

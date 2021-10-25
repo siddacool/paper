@@ -8,6 +8,17 @@
   import Paper from '~/components/Paper.svelte';
   import Select from '~/components/Select.svelte';
   import Checkbox from '~/components/Checkbox.svelte';
+  import ReferenceSection from '~/components/ReferenceSection.svelte';
+  const referencesList = [
+    {
+      title: 'material design elevation',
+      href: 'https://material-components.github.io/material-components-web-catalog/#/component/elevation',
+    },
+    {
+      title: 'mui - Paper',
+      href: 'https://mui.com/components/paper/#main-content',
+    },
+  ];
   let classesList = [];
 
   let elevationVal = 'elevation-1';
@@ -32,7 +43,15 @@
 <section>
   <h2>Elevation</h2>
 
-  <p>Add a elevation to paper like this</p>
+  <p>
+    Paper supports Elevation (box shadows) based on
+    <a
+      href="https://material-components.github.io/material-components-web-catalog/#/component/elevation"
+      target="_blank"
+    >
+      material design elevation
+    </a>.
+  </p>
 
   <DisplayBox classesList={[elevationVal, ...classesList]}>
     <Paper
@@ -49,4 +68,6 @@
       <Select options={elevationOptions} on:change={onElevationValChange} value={elevationVal} />
     </div>
   </DisplayBox>
+
+  <ReferenceSection list={referencesList} />
 </section>

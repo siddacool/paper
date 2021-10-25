@@ -24,7 +24,10 @@
 <section>
   <h2>Border</h2>
 
-  <p>Add a border around paper like this</p>
+  <p>
+    Border can be added around Paper as follows. <code>hollow</code> can supplement a bordered Paper
+    container with a transparent background.
+  </p>
 
   <DisplayBox {classesList}>
     <Paper class="example" border hollow={classesList.includes('hollow')} />

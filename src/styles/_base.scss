@@ -10,10 +10,6 @@ body {
   box-sizing: border-box;
 }
 
-h3 {
-  margin: 0;
-}
-
 p {
   font-size: clamp(1.2rem, 1.6vw, 1.6rem);
   line-height: 1.7;
@@ -28,12 +24,23 @@ h2 {
   margin-top: 0;
 }
 
+header {
+  h3 {
+    margin: 0;
+  }
+}
+
 .wrapper-docs {
   main {
     .main-paper {
       & > section {
         width: 100%;
       }
+    }
+
+    h3 {
+      font-size: clamp(1.4rem, 1.65vw, 1.65rem);
+      line-height: 1.7;
     }
   }
 }

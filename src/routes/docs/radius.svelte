@@ -21,13 +21,19 @@
 
 <section>
   <h2>Radius</h2>
-
-  <p>Add a radius around paper like this</p>
+  <p>Rounded corners can be added as follows. The roundness can be further customized.</p>
 
   <DisplayBox classesList={[radiusVal]}>
     <Paper class="example" radius={`${radiusVal.replace('radius-', '')}`} />
     <div slot="options">
       <Select options={radiusOptions} on:change={onRadiusChange} value={radiusVal} />
     </div>
+  </DisplayBox>
+
+  <h3>Circle</h3>
+  <p>Paper can be made circuler using <code>radius-circle</code>.</p>
+
+  <DisplayBox classesList={['radius-circle']}>
+    <Paper class="example" radius="circle" />
   </DisplayBox>
 </section>

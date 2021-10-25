@@ -1,22 +1,15 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
   export let label = '';
   export let options = [];
   export let value = '';
   let clazz;
   export { clazz as class };
-
-  const dispatch = createEventDispatcher();
-
-  const forward = (event) => {
-    dispatch('change', event.target.value);
-  };
 </script>
 
 <div class={`select ${clazz || ''}`}>
   <label>
     {label}
-    <select bind:value on:change={(e) => forward(e)}>
+    <select bind:value on:change>
       {#each options as option}
         <option value={option.value}>
           {option.name}

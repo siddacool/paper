@@ -11,7 +11,7 @@
   let elevationVal = 'elevation-1';
 
   const onElevationValChange = (event) => {
-    elevationVal = event.detail;
+    elevationVal = event.target.value;
   };
 </script>
 

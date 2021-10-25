@@ -11,7 +11,7 @@
   let radiusVal = 'radius-1';
 
   const onRadiusChange = (event) => {
-    radiusVal = event.detail;
+    radiusVal = event.target.value;
   };
 </script>
 

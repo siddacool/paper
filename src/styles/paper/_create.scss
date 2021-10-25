@@ -212,30 +212,37 @@
   &.color {
     &-primary {
       background-color: var(--paper-color-bg-primary);
+      border-color: var(--paper-color-border-primary);
     }
 
     &-secondary {
       background-color: var(--paper-color-bg-secondary);
+      border-color: var(--paper-color-border-secondary);
     }
 
     &-dull {
       background-color: var(--paper-color-bg-dull);
+      border-color: var(--paper-color-border-dull);
     }
 
     &-danger {
       background-color: var(--paper-color-bg-danger);
+      border-color: var(--paper-color-border-danger);
     }
 
     &-safe {
       background-color: var(--paper-color-bg-safe);
+      border-color: var(--paper-color-border-safe);
     }
 
     &-warning {
       background-color: var(--paper-color-bg-warning);
+      border-color: var(--paper-color-border-warning);
     }
 
     &-info {
       background-color: var(--paper-color-bg-info);
+      border-color: var(--paper-color-border-info);
     }
   }
 }

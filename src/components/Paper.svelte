@@ -2,6 +2,7 @@
   import '~/styles/paper/index.scss';
   export let border = false;
   export let hollow = false;
+  export let black = false;
   export let radius = '';
   export let elevation = '';
   let clazz;
@@ -14,6 +15,7 @@
   }`}
   class:border
   class:hollow
+  class:black
 >
   <slot />
 </div>

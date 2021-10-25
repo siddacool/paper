@@ -21,6 +21,8 @@
 
   // colors
   --paper-color-bg-default: #fff;
+  --paper-color-bg-black: var(--paper-color-bg-default);
+  --paper-color-bg-hollow: transparent;
   --paper-color-border: #ddd9d9;
 
   // border
@@ -30,5 +32,6 @@
 
 .dark {
   --paper-color-bg-default: #212121;
+  --paper-color-bg-black: #000;
   --paper-color-border: #403e3e;
 }

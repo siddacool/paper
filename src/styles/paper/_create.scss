@@ -100,10 +100,10 @@
   }
 
   &.hollow {
-    background-color: transparent;
+    background-color: var(--paper-color-bg-hollow);
   }
 
   &.black {
-    background-color: #000;
+    background-color: var(--paper-color-bg-black);
   }
 }

@@ -7,11 +7,21 @@
   import DisplayBox from '~/components/DisplayBox.svelte';
   import Paper from '~/components/Paper.svelte';
   import Select from '~/components/Select.svelte';
+  import Checkbox from '~/components/Checkbox.svelte';
+  let classesList = [];
 
   let elevationVal = 'elevation-1';
 
   const onElevationValChange = (event) => {
     elevationVal = event.target.value;
+  };
+
+  const onDarkChange = (e) => {
+    if (classesList.includes('black')) {
+      classesList = classesList.filter((c) => c !== 'black');
+    } else {
+      classesList = [...classesList, 'black'];
+    }
   };
 </script>
 
@@ -24,9 +34,18 @@
 
   <p>Add a elevation to paper like this</p>
 
-  <DisplayBox classesList={[elevationVal]}>
-    <Paper class="example" elevation={`${elevationVal.replace('elevation-', '')}`} />
+  <DisplayBox classesList={[elevationVal, ...classesList]}>
+    <Paper
+      class="example"
+      elevation={`${elevationVal.replace('elevation-', '')}`}
+      black={classesList.includes('black')}
+    />
     <div slot="options">
+      <Checkbox
+        label="black (dark theme)"
+        on:change={onDarkChange}
+        checked={classesList.includes('black')}
+      />
       <Select options={elevationOptions} on:change={onElevationValChange} value={elevationVal} />
     </div>
   </DisplayBox>

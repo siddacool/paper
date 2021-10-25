@@ -52,31 +52,4 @@
   <DisplayBox {classesListOg}>
     <Paper class="example" />
   </DisplayBox>
-
-  <br />
-
-  <p>Paper can be customized using classes. here is Paper with all the available configurations</p>
-
-  <DisplayBox classesList={[...classesList, radiusVal]}>
-    <Paper
-      class="example"
-      border={classesList.includes('border')}
-      hollow={classesList.includes('hollow')}
-      radius={`${radiusVal.replace('radius-', '')}`}
-    />
-
-    <div slot="options">
-      <Checkbox
-        label="border"
-        on:change={onBorderChange}
-        checked={classesList.includes('border')}
-      />
-      <Checkbox
-        label="hollow"
-        on:change={onHollowChange}
-        checked={classesList.includes('hollow')}
-      />
-      <Select options={radiusOptions} on:change={onRadiusChange} value={radiusVal} />
-    </div>
-  </DisplayBox>
 </section>

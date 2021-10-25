@@ -15,14 +15,14 @@ const sidebarNav = [
     icon: 'paper-clip',
   },
   {
-    name: 'Color',
-    path: 'color',
-    icon: 'color-swatch',
-  },
-  {
     name: 'Elevation',
     path: 'elevation',
     icon: 'chevron-double-up',
+  },
+  {
+    name: 'Color',
+    path: 'color',
+    icon: 'color-swatch',
   },
 ];
 

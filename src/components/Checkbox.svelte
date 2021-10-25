@@ -7,7 +7,7 @@
 
 <div class={`checkbox ${clazz || ''}`}>
   <label>
-    <input type="checkbox" on:change {checked} />
+    <input type="checkbox" on:change bind:checked />
     {label}
   </label>
 </div>

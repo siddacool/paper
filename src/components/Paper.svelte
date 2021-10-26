@@ -1,5 +1,5 @@
 <script>
-  import '~/styles/paper/index.scss';
+  import '@papermade/core/styles.css';
   export let border = false;
   export let hollow = false;
   export let black = false;

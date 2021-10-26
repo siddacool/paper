@@ -24,6 +24,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@papermade/core": "0.0.3",
     "svelte-hero-icons": "^3.0.0"
   }
 }

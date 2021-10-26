@@ -10,7 +10,7 @@
 </svelte:head>
 
 <section>
-  <Paper elevation="2" radius="2">
+  <Paper elevation="3" radius="2">
     <ThemeToggleSection />
     <h1>Paper</h1>
     <p>

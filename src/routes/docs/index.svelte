@@ -13,6 +13,9 @@
 </svelte:head>
 
 <section>
+  <p>Get started</p>
+  <CodeBox>npm i @papermade/core</CodeBox>
+
   <p>import css in your project</p>
   <CodeBox>import '@papermade/core/styles.css';</CodeBox>
 

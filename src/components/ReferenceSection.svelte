@@ -1,9 +1,10 @@
 <script>
   export let list = [];
+  export let title = 'References';
 </script>
 
 <div class="reference-section">
-  <div>References:</div>
+  <div>{title}:</div>
 
   <ul>
     {#each list as { href, title }}

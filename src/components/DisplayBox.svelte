@@ -18,6 +18,7 @@
 
 <style lang="scss">
   .display-box {
+    border-radius: 4px;
     width: 100%;
     min-height: 300px;
     font-size: clamp(1.2rem, 1.6vw, 1.6rem);

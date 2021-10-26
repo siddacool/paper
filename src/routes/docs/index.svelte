@@ -3,37 +3,9 @@
 </script>
 
 <script>
-  import radiusOptions from '~/data/radius-options';
-  import Checkbox from '~/components/Checkbox.svelte';
+  import CodeBox from '~/components/CodeBox.svelte';
   import DisplayBox from '~/components/DisplayBox.svelte';
   import Paper from '~/components/Paper.svelte';
-  import Select from '~/components/Select.svelte';
-  import Border from './border.svelte';
-  const classesListOg = [];
-
-  let classesList = [];
-
-  const onHollowChange = (e) => {
-    if (classesList.includes('hollow')) {
-      classesList = classesList.filter((c) => c !== 'hollow');
-    } else {
-      classesList = [...classesList, 'hollow'];
-    }
-  };
-
-  const onBorderChange = (e) => {
-    if (classesList.includes('border')) {
-      classesList = classesList.filter((c) => c !== 'border');
-    } else {
-      classesList = [...classesList, 'border'];
-    }
-  };
-
-  let radiusVal = 'radius-1';
-
-  const onRadiusChange = (event) => {
-    radiusVal = event.target.value;
-  };
 </script>
 
 <svelte:head>
@@ -41,15 +13,12 @@
 </svelte:head>
 
 <section>
-  <p>
-    Paper is one shoes fits all component that can be modified and adpated to make layouts, UI
-    compoenents. It's written in scss and uses css variables which can be tinkered as per one's
-    needs.
-  </p>
+  <p>import css in your project</p>
+  <CodeBox>import '@papermade/core/styles.css';</CodeBox>
 
-  <p>Following is the example with required class name to make it work 👉</p>
+  <p>and initiate Paper as shown in the example below 👉</p>
 
-  <DisplayBox {classesListOg}>
+  <DisplayBox>
     <Paper class="example" />
   </DisplayBox>
 </section>

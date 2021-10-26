@@ -2,7 +2,7 @@
 
 One component to rule em' all.
 
-https://paperstyle.netlify.app/
+papermade.netlify.app
 
 ## Credits / Inspiration / Helpful links
 

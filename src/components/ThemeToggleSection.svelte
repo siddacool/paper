@@ -19,11 +19,12 @@
 </Button>
 
 <style lang="scss">
-  .theme-toggle-section {
-    margin-left: auto;
-  }
-
   :global(.theme-toggle-btn) {
     color: var(--paper-site-primary-color);
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>

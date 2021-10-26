@@ -2,6 +2,7 @@
   import Paper from '~/components/Paper.svelte';
   import MenuButton from '~/components/MenuButton.svelte';
   import ThemeToggleSection from '../ThemeToggleSection.svelte';
+  import GithubLink from '../GithubLink.svelte';
 </script>
 
 <header>
@@ -10,7 +11,11 @@
     <h3>
       <a href="/docs/">Paper.docs</a>
     </h3>
-    <ThemeToggleSection />
+
+    <div class="right-menu">
+      <GithubLink />
+      <ThemeToggleSection />
+    </div>
   </Paper>
 </header>
 
@@ -56,6 +61,12 @@
       @media (min-width: 900px) {
         display: none;
       }
+    }
+
+    .right-menu {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
     }
   }
 </style>

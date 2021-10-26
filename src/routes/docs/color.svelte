@@ -8,6 +8,8 @@
   import Checkbox from '~/components/Checkbox.svelte';
   import Paper from '~/components/Paper.svelte';
   import Select from '~/components/Select.svelte';
+  import ColorsTable from '~/components/VairableTables/ColorsTable.svelte';
+  import ElevationColorsTable from '~/components/VairableTables/ElevationColorsTable.svelte';
   let classesList = [];
 
   let colorVal = 'color-primary';
@@ -52,4 +54,8 @@
       <Select options={colorOptions} on:change={onColorValChange} value={colorVal} />
     </div>
   </DisplayBox>
+
+  <h3>css variables</h3>
+  <ColorsTable />
+  <ElevationColorsTable />
 </section>

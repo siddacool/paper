@@ -4,7 +4,7 @@
 
 <style lang="scss">
   .code-box {
-    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+    font-size: var(--paper-site-paragraph-font-size);
 
     code {
       background-color: var(--paper-site-display-box-color);

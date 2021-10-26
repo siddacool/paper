@@ -7,6 +7,7 @@
   import DisplayBox from '~/components/DisplayBox.svelte';
   import Paper from '~/components/Paper.svelte';
   import Select from '~/components/Select.svelte';
+  import RadiusTable from '~/components/VairableTables/RadiusTable.svelte';
 
   let radiusVal = 'radius-1';
 
@@ -36,4 +37,7 @@
   <DisplayBox classesList={['radius-circle']}>
     <Paper class="example" radius="circle" />
   </DisplayBox>
+
+  <h3>css variables</h3>
+  <RadiusTable />
 </section>

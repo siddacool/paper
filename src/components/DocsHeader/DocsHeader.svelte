@@ -22,6 +22,7 @@
     left: 0;
     bottom: 0;
     width: 100vw;
+    z-index: 10;
 
     @media (min-width: 900px) {
       position: static;

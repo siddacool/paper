@@ -21,7 +21,7 @@
     border-radius: 4px;
     width: 100%;
     min-height: 300px;
-    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+    font-size: var(--paper-site-paragraph-font-size);
     padding: var(--paper-site-space-2);
     background-color: var(--paper-site-display-box-color);
     margin-bottom: var(--paper-site-space-4);

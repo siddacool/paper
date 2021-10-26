@@ -21,11 +21,13 @@
   --paper-site-link-color: #2e6fd1;
 
   --paper-site-display-box-color: #f3f3f3;
+
+  --paper-site-paragraph-font-size: clamp(1.2rem, 1.6vw, 1.6rem);
 }
 
 .dark {
   --paper-site-border-color: #2a2a2a;
-  --paper-site-selection-color: #111d28;
+  --paper-site-selection-color: #052e54;
   --paper-site-primary-color: #dc8eff;
   --paper-site-font-color: #bcb6d3;
   --paper-color-bg-default: #141418 !important;

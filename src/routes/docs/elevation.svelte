@@ -9,6 +9,7 @@
   import Select from '~/components/Select.svelte';
   import Checkbox from '~/components/Checkbox.svelte';
   import ReferenceSection from '~/components/ReferenceSection.svelte';
+  import ElevationColorsTable from '~/components/VairableTables/ElevationColorsTable.svelte';
   const referencesList = [
     {
       title: 'material design elevation',
@@ -68,6 +69,9 @@
       <Select options={elevationOptions} on:change={onElevationValChange} value={elevationVal} />
     </div>
   </DisplayBox>
+
+  <h3>css variables</h3>
+  <ElevationColorsTable />
 
   <ReferenceSection list={referencesList} />
 </section>

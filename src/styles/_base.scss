@@ -11,7 +11,7 @@ body {
 }
 
 p {
-  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  font-size: var(--paper-site-paragraph-font-size);
   line-height: 1.7;
 
   @media (min-width: 900px) {

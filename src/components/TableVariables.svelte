@@ -18,10 +18,16 @@
         </tr>
       </thead>
       <tbody>
-        {#each items as item}
+        {#each items as item, i}
           <tr>
             {#each columns as column}
-              <td>{item[column.id] ? item[column.id] : ''}</td>
+              {#if column.cellComponent}
+                <svelte:component this={column.cellComponent} {item} rowIndex={i} />
+              {:else}
+                <td>
+                  {item[column.id] ? item[column.id] : ''}
+                </td>
+              {/if}
             {/each}
           </tr>
         {/each}
@@ -41,6 +47,11 @@
       max-height: 400px;
     }
 
+    .title,
+    table {
+      min-width: 400px;
+    }
+
     .title {
       padding: var(--paper-site-space-1);
       font-size: 1rem;
@@ -51,7 +62,6 @@
     table {
       table-layout: auto;
       width: 100%;
-      min-width: 400px;
       border: none;
     }
 

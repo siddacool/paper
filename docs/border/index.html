@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Paper - border</title>
+
+		
+
+		<link rel="modulepreload" href="/_app/start-8d0c6e22.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-66f39ca5.js">
+		<link rel="modulepreload" href="/_app/pages/docs/__layout.reset.svelte-7d9d4a29.js">
+		<link rel="modulepreload" href="/_app/chunks/Paper-8d19b93a.js">
+		<link rel="modulepreload" href="/_app/chunks/IconSelector-58674cda.js">
+		<link rel="modulepreload" href="/_app/chunks/ThemeToggleSection-813b3605.js">
+		<link rel="modulepreload" href="/_app/chunks/theme-add7fa00.js">
+		<link rel="modulepreload" href="/_app/chunks/ThemeSetter-a5ab88dd.js">
+		<link rel="modulepreload" href="/_app/pages/docs/border.svelte-2dab7564.js">
+		<link rel="modulepreload" href="/_app/chunks/Checkbox-a4cd7308.js">
+		<link rel="modulepreload" href="/_app/chunks/DisplayBox-eb9e2ca0.js">
+		<link rel="stylesheet" href="/_app/assets/start-c446e5f0.css">
+		<link rel="stylesheet" href="/_app/assets/pages/docs/__layout.reset.svelte-441dffae.css">
+		<link rel="stylesheet" href="/_app/assets/app-7755f445.css">
+		<link rel="stylesheet" href="/_app/assets/Paper-93a0d19b.css">
+		<link rel="stylesheet" href="/_app/assets/IconSelector-a01321ea.css">
+		<link rel="stylesheet" href="/_app/assets/ThemeToggleSection-ab01a57a.css">
+		<link rel="stylesheet" href="/_app/assets/Checkbox-e70b997e.css">
+		<link rel="stylesheet" href="/_app/assets/DisplayBox-f8b53fa6.css">
+
+		<script type="module">
+			import { start } from "/_app/start-8d0c6e22.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/docs/__layout.reset.svelte-7d9d4a29.js"),
+						import("/_app/pages/docs/border.svelte-2dab7564.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/docs/border",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="svelte">
+
+
+
+<div class="wrapper-docs svelte-t9jpe8"><header class="svelte-1wc1lot"><div class="paper-made header-paper"><button class="button menu-btn">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="heroicon solid icon " aria-hidden="false" width="20px" height="20px">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+
+
+
+
+
+
+
+
+
+
+</button>
+    <h3><a href="/docs/" class="svelte-1wc1lot">Paper.docs</a></h3>
+
+    <div class="right-menu svelte-1wc1lot"><a href="https://github.com/siddacool/papermade-core" target="_blank" class="github-link svelte-jcfrl3"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24" class="svelte-jcfrl3"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+      <div class="theme-toggle-section"></div>
+
+<button class="button theme-toggle-btn">
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="heroicon solid icon " aria-hidden="false" width="20px" height="20px">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+
+
+
+
+
+
+
+
+</button></div></div>
+</header>
+  <aside class="aside sidebar svelte-148jsgn"><div class="paper-made sidebar-paper"><ul class="sidebar-ul svelte-148jsgn"><li class="svelte-148jsgn"><a href="/docs/" class="svelte-1wwoand" target="">Home
+
+              
+            
+</a>
+        </li><li class="svelte-148jsgn"><a href="/docs/border" class="active svelte-1wwoand" target="">Border
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="heroicon solid icon active-icon" aria-hidden="false" width="20px" height="20px">
+        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+
+
+
+
+
+
+
+
+
+
+
+            
+</a>
+        </li><li class="svelte-148jsgn"><a href="/docs/radius" class="svelte-1wwoand" target="">Radius
+
+              
+            
+</a>
+        </li><li class="svelte-148jsgn"><a href="/docs/elevation" class="svelte-1wwoand" target="">Elevation
+
+              
+            
+</a>
+        </li><li class="svelte-148jsgn"><a href="/docs/color" class="svelte-1wwoand" target="">Color
+
+              
+            
+</a>
+        </li><li class="svelte-148jsgn"><a href="/docs/component" class="svelte-1wwoand" target="">Component
+
+              
+            
+</a>
+        </li>
+      <li class="svelte-148jsgn"><br>
+        <a href="/preview" class="svelte-1wwoand external" target="_blank">Preview 
+
+
+
+
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="heroicon solid icon " aria-hidden="false" width="22px" height="22px">
+        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+
+
+</a></li></ul></div>
+</aside>
+  <main class="svelte-7klaga">
+
+<section><h2>Border</h2>
+
+  <p>Border can be added around Paper as follows. <code>hollow</code> can supplement a bordered Paper
+    container with a transparent background.
+  </p>
+
+  <article class="display-box svelte-1brh2od"><div class="preview svelte-1brh2od"><div class="paper-made example    border hollow"></div></div>
+  <div class="code-box svelte-1brh2od"><div class="options"><div slot="options"><div class="checkbox  svelte-p07oea"><label class="svelte-p07oea"><input type="checkbox" checked>
+    hollow</label>
+</div></div></div>
+    <pre><code class="svelte-1brh2od">&lt;div class=&quot;<b class="svelte-1brh2od">paper-made border hollow</b>&quot;&gt;&lt;/div&gt;
+     </code></pre></div>
+</article></section>
+</main>
+  
+</div>
+
+
+
+			
+		</div>
+  </body>
+</html>

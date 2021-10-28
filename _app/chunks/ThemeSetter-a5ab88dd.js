@@ -1,0 +1,1 @@
+import{S as s,i as r,s as t,H as a}from"./vendor-66f39ca5.js";import{t as e}from"./theme-add7fa00.js";function o(s){let r=null;r=document.querySelector("body");const t=e.subscribe((s=>{"dark"===s?r.classList.add("dark"):r.classList.remove("dark")}));return a(t),[]}class c extends s{constructor(s){super(),r(this,s,o,null,t,{})}}export{c as T};

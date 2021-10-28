@@ -35,6 +35,12 @@
           {/if}
         </li>
       {/each}
+      <li>
+        <br />
+        <DecoratedLink href="/preview" target="_blank" external>
+          Preview <IconSelector icon="arrow-narrow-right" size="22" />
+        </DecoratedLink>
+      </li>
     </ul>
   </Paper>
 </aside>

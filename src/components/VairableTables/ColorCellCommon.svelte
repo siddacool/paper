@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { browser } from '$app/env';
   import theme from '~/store/theme';
+  import { rgbToHex } from '~/helpers/color-converters';
 
   export let item = {};
   export let isDark = false;
@@ -13,6 +14,8 @@
     if (browser) {
       const style = window.getComputedStyle(element, '');
       bgColor = style.getPropertyValue('background-color');
+
+      bgColor = rgbToHex(bgColor);
     }
   });
 </script>

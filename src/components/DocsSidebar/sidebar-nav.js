@@ -24,6 +24,10 @@ const sidebarNav = [
     path: 'color',
     icon: 'color-swatch',
   },
+  {
+    name: 'Component',
+    path: 'component',
+  },
 ];
 
 export default sidebarNav;

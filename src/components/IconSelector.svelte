@@ -5,7 +5,15 @@
   let clazz = '';
   export { clazz as class };
 
-  import { ChevronRight, Menu, Moon, Sun, ArrowLeft } from 'svelte-hero-icons';
+  import {
+    ChevronRight,
+    Menu,
+    Moon,
+    Sun,
+    ArrowLeft,
+    ArrowNarrowRight,
+    Download,
+  } from 'svelte-hero-icons';
   import Icon from 'svelte-hero-icons/Icon.svelte';
 </script>
 
@@ -27,4 +35,12 @@
 
 {#if icon === 'arrow-left'}
   <Icon src={ArrowLeft} {size} solid={solidIcon} class={`icon ${clazz || ''}`} />
+{/if}
+
+{#if icon === 'arrow-narrow-right'}
+  <Icon src={ArrowNarrowRight} {size} solid={solidIcon} class={`icon ${clazz || ''}`} />
+{/if}
+
+{#if icon === 'download'}
+  <Icon src={Download} {size} solid={solidIcon} class={`icon ${clazz || ''}`} />
 {/if}

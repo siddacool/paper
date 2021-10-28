@@ -1,9 +1,13 @@
 <script>
+  import { browser } from '$app/env';
+  import { onDestroy } from 'svelte';
   import colorVariables from '~/data/color-css-variables';
   import TableVariables from '../TableVariables.svelte';
   import ColorCell from './ColorCell.svelte';
   import ColorCellDark from './ColorCellDark.svelte';
-  const columns = [
+  import theme from '~/store/theme';
+
+  let columns = [
     {
       id: 'name',
       name: 'Name',
@@ -17,12 +21,29 @@
       name: 'color',
       cellComponent: ColorCell,
     },
-    {
-      id: 'color-dark',
-      name: '(dark)',
-      cellComponent: ColorCellDark,
-    },
   ];
+
+  const title = 'Color Variables';
+  const titleDark = `${title} (enable light theme ☀ to see color values)`;
+
+  const unsubscribe = theme.subscribe((value) => {
+    if (browser) {
+      if (value === 'light') {
+        columns = [
+          ...columns,
+          {
+            id: 'color-dark',
+            name: '.dark',
+            cellComponent: ColorCellDark,
+          },
+        ];
+      } else {
+        columns = columns.filter((c) => c.id !== 'color-dark');
+      }
+    }
+  });
+
+  onDestroy(unsubscribe);
 </script>
 
-<TableVariables {columns} items={colorVariables} title="Color Variables" />
+<TableVariables {columns} items={colorVariables} title={$theme === 'dark' ? titleDark : title} />

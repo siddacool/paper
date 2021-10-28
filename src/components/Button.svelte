@@ -1,7 +1,4 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
-  const dispatch = createEventDispatcher();
-
   let clazz;
   export { clazz as class };
 </script>

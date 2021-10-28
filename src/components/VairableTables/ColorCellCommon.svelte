@@ -2,7 +2,6 @@
   import { onMount } from 'svelte';
   import { browser } from '$app/env';
   import theme from '~/store/theme';
-  import { RGBToHex } from '~/helpers/color-converters';
 
   export let item = {};
   export let isDark = false;

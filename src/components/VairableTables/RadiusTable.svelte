@@ -1,6 +1,8 @@
 <script>
   import radiusVariables from '~/data/radius-css-variables';
   import TableVariables from '../TableVariables.svelte';
+  import CommonValueCell from './CommonValueCell.svelte';
+
   const columns = [
     {
       id: 'name',
@@ -13,6 +15,7 @@
     {
       id: 'value',
       name: 'value',
+      cellComponent: CommonValueCell,
     },
   ];
 </script>

@@ -1,6 +1,7 @@
 <script>
   import ElevationColorVariables from '~/data/elevation-color-css-variables';
   import TableVariables from '../TableVariables.svelte';
+  import CommonValueCell from './CommonValueCell.svelte';
   const columns = [
     {
       id: 'name',
@@ -9,6 +10,11 @@
     {
       id: 'variable',
       name: 'css-variable',
+    },
+    {
+      id: 'value',
+      name: 'value',
+      cellComponent: CommonValueCell,
     },
   ];
 </script>

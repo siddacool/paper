@@ -16,7 +16,7 @@
   :global(.menu-btn) {
     margin-right: var(--paper-site-space-2);
     @media (min-width: 900px) {
-      display: none;
+      display: none !important;
     }
   }
 </style>
